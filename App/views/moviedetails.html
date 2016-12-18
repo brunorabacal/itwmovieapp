@@ -1,0 +1,94 @@
+﻿<div data-bind="foreach : movieDetails" class="container">
+    <div class="col-md-4">
+        <img class="poster" data-bind="attr:{src: poster || 'default_poster' }" />  
+     </div>
+    <div class="col-md-8">
+        <div class="title-block col-md-12">
+            <h1 class="title-block" data-bind="text: movie_title"></h1>
+            <span id="year_title" data-bind="text: title_year"></span>
+            <span><i class="fa fa-star star_empty"></i></span>
+            <span><i class="fa fa-star star_empty"></i></span>
+            <span><i class="fa fa-star star_empty"></i></span>
+            <span><i class="fa fa-star star_empty"></i></span>
+            <span><i class="fa fa-star star_empty"></i></span>
+
+            <a data-bind="attr:{ href: movie_imdb_link}" target="_blank">
+                <img class="imdb_logo" src="http://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.pnghttp://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.png" alt="IMDb Link" />
+            </a>
+        </div>
+        <table class="table table-hover table-condensed">
+            <tr>
+                <th>Genres</th>
+                <td data-bind="foreach: genres">
+                    <a data-bind="attr: { href : '#GenreDetails/'+genreID}, text: genreName"></a>
+                </td>
+            </tr>
+            <tr>
+                <th>Keywords </th>
+                <td data-bind="text: plot_keywords"></td>
+            </tr>
+            <tr>
+                <th>Director</th>
+                <td><a data-bind="attr: { href : '#directorDetails/'+directorID}, text: directorName"></a></td>
+            </tr>
+            
+            <tr>
+                <th>Country</th>
+                <td data-bind="text: countryName"></td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <td data-bind="text: languageName"></td>
+            </tr>
+            <tr>
+                <th>Movie Actors</th>
+                <td data-bind="foreach: movie_actors">
+                    <a data-bind="attr: { href : '#ActorDetails/'+actorID}, text: actorName"></a>
+                </td>
+            </tr>
+            <tr>
+                <th>Duration (min):</th>
+                <td data-bind="text: duration"></td>
+            </tr>
+            <tr>
+                <th>Content Ranting:</th>
+                <td data-bind="text: content_rating"></td>
+            </tr>
+            <tr>
+                <th>IMDb Score:</th>
+                <td data-bind="text: imdb_score"></td>
+            </tr>
+            <tr>
+                <th>Budget:</th>
+                <td data-bind="text: budget"></td>
+            </tr>
+            <tr>
+                <th>Gross:</th>
+                <td data-bind="text: gross"></td>
+            </tr>
+            <tr>
+                <th>Critics for Reviews:</th>
+                <td data-bind="text: num_critic_for_reviews"></td>
+            </tr>
+            <tr>
+                <th>Users for Reviews:</th>
+                <td data-bind="text: num_user_for_reviews"></td>
+            </tr>
+            <tr>
+                <th>Voted Users:</th>
+                <td data-bind="text: num_voted_users"></td>
+            </tr>
+            <tr>
+                <th>Cast Facebook likes:</th>
+                <td data-bind="text: cast_total_facebook_likes"></td>
+            </tr>
+            <tr>
+                <th>Facebook likes:</th>
+                <td data-bind="text: movie_facebook_likes"></td>
+            </tr>
+
+</table>
+    </div>
+
+</div>
+
