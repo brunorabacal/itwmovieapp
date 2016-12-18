@@ -32,14 +32,14 @@
 });
 
 movieUrl = "http://192.168.160.39/api/Movies/";
-actorInfo = ko.observableArray();
+actorDetails = ko.observableArray();
 
 getPosts = function () {
-    var moviesArrray = actorInfo()["actor_movies"];
+    var moviesArrray = actorDetails()["actor_movies"];
     for (i = 0; i < moviesArray.lenght; i++) {
         var movieID = moviesArrya[i]["movieID"];
         ajaxHelper(movieUrl + movieID.toString(), 'GET').done(function (data) {
-            actorInfo()[i]["poster"] = data["poster"];
+            actorDetails()[i]["poster"] = data["poster"];
         });
     }
 }
