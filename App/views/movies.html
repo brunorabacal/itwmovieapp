@@ -16,7 +16,7 @@
             </div>
         </form>
     </div>
-    <hr />
+  
     <div class="row" data-bind="foreach: movies">
         <div class="col-md-4">
             <div><i class="fa fa-film"></i> <a data-bind="attr: { href : '#movieDetails/'+movieID}, text: movie_title"></a></div>
@@ -26,12 +26,12 @@
 
     <div class="row" data-bind="foreach: movies">
         <div class="col-md-2">
-            <div>
-                <a data-bind="attr: { href : '#movieDetails/'+movieID}">
-                <img class="img-thumbnail" data-bind="attr:{src: poster || '/Content/images/default_poster.jpg'}" />
-                </a>
-            </div>
 
+            <a data-bind="attr: { href : '#movieDetails/'+movieID}">
+                <img class="img-thumbnail" data-bind="attr:{src: poster}" />
+            </a>
+
+            <!-- || '/Content/images/default_poster.jpg-->
 
         </div>
 

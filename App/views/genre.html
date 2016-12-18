@@ -1,10 +1,28 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
+﻿<div class="container">
+    <div class="text-center">
+        <h2>Search Movies by Name  - <small data-bind="visible: (moviesCount() > 0)"><i class="fa fa-film"></i> [<span data-bind="text: moviesCount"></span> ]</small></h2>
+    </div>
+    <div class="row">
+        <form data-bind="submit: searchMovies">
+            <div class="col-md-6 col-md-offset-2">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Movie Name:</span>
+                    <input type="text" id="movieTitle" class="form-control" data-bind="value : searchText, valueUpdate: 'afterkeydown'" aria-describedby="basic-addon1" placeholder="Movie name" />
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-default" id="searchBtn" data-bind="click: searchMovies, disable : searchTextGood"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearMovies"><i class="fa fa-trash-o"></i></button>
+            </div>
+        </form>
+    </div>
+    <hr />
+    <div class="row" data-bind="foreach: movies">
+        <div class="col-md-4">
+            <div><i class="fa fa-film"></i> <a data-bind="attr: { href : '#movieDetails/'+movieID}, text: movie_title"></a></div>
+        </div>
+    </div>
+    <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
+</div>
 
-</body>
-</html>
+

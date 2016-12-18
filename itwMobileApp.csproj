@@ -102,6 +102,7 @@
     <Content Include="App\views\welcome.html" />
     <Content Include="Content\images\bckg.jpg" />
     <Content Include="Content\images\default_poster.jpg" />
+    <Content Include="Content\images\noposter.png" />
     <Content Include="icon.png" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
