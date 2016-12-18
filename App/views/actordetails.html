@@ -7,33 +7,32 @@
             <h1 class="title-block" data-bind="text: actorName"></h1>
         </div>
         <div class="title-block col-md-12">
-
+            <table class="table table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Year<i class='fa fa-calendar'></i></th>
+                        <th>Score<i class='fa fa-imdb'></i></th>
+                        <th>IMDb<i class='fa fa-link'></i></th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: actor_movies">
+                    <tr>
+                        <td><a data-bind="attr: { href : '#MovieDetails/'+movieID}, text: movie_title"></a></td>
+                        <td data-bind="text: title_year"></td>
+                        <td data-bind="text: imdb_score"></i></td>
+                        <td><a data-bind="attr: {href: 'movie_imdb_link'},text: movie_imdb_link"></a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <table class="table table-hover table-condensed">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Year<i class='fa fa-calendar'></i></th>
-                <th>Score<i class='fa fa-imdb'></i></th>
-                <th>IMDb<i class='fa fa-link'></i></th>
-            </tr>
-        </thead>
-        <tbody data-bind="foreach: actor_movies">
-            <tr>
-                <td><a data-bind="attr: { href : '#MovieDetails/'+movieID}, text: movie_title"></a></td>
-                <td data-bind="text: title_year"></td>
-                <td data-bind="text: imdb_score"></i></td>
-                <td><a data-bind="attr: {href: 'movie_imdb_link'},text: movie_imdb_link"></a></td>
-            </tr>
-        </tbody>
-    </table>
+    
     <div data-bind="foreach : actor_movies" class="container">
         <div class="col-md-2">
-            <a data-bind="attr: { href : '#MovieDetails/'+movieID}, text: movie_title">
-                <img class="poster" data-bind="attr: { src: poster }" />
-            </a>
+               <img class="poster" data-bind="attr: { src: poster }" />
+            
         </div>
     </div>
 </div>
