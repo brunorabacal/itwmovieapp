@@ -6,7 +6,9 @@
         var url = location.hash;
         var id = url.split("/").pop();
         var actorDetailsUri = 'http://192.168.160.39/api/Actors/';
+        var movieUrl = "http://192.168.160.39/api/Movies/";
         self.actorDetails = ko.observableArray([]);
+
         self.error = ko.observable();
                 //--- Funções internas
         function ajaxHelper(uri, method, data) {
@@ -23,6 +25,17 @@
                 }
             })
         }
+
+        getPosts = function () {
+            var moviesArrray = actorDetails()["actor_movies"];
+            for (i = 0; i < moviesArray.lenght; i++) {
+                var movieID = moviesArrya[i]["movieID"];
+                ajaxHelper(movieUrl + movieID.toString(), 'GET').done(function (data) {
+                    actorDetails()[i]["poster"] = data["poster"];
+                });
+            }
+        }
+
         //---- Chamada inicial
         ajaxHelper(actorDetailsUri + id, 'GET').done(function (data) {
             self.actorDetails(data);
@@ -31,15 +44,6 @@
     return ctor;
 });
 
-movieUrl = "http://192.168.160.39/api/Movies/";
-actorDetails = ko.observableArray();
 
-getPosts = function () {
-    var moviesArrray = actorDetails()["actor_movies"];
-    for (i = 0; i < moviesArray.lenght; i++) {
-        var movieID = moviesArrya[i]["movieID"];
-        ajaxHelper(movieUrl + movieID.toString(), 'GET').done(function (data) {
-            actorDetails()[i]["poster"] = data["poster"];
-        });
-    }
-}
+
+
