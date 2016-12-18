@@ -86,6 +86,8 @@
     <Content Include="App\viewmodels\directordetails.js" />
     <Content Include="App\viewmodels\directors.js" />
     <Content Include="App\viewmodels\actors.js" />
+    <Content Include="App\viewmodels\genre.js" />
+    <Content Include="App\viewmodels\genredetails.js" />
     <Content Include="App\viewmodels\moviedetails.js" />
     <Content Include="App\viewmodels\movies.js" />
     <Content Include="App\viewmodels\welcome.js" />
@@ -93,6 +95,8 @@
     <Content Include="App\views\actors.html" />
     <Content Include="App\views\directordetails.html" />
     <Content Include="App\views\directors.html" />
+    <Content Include="App\views\genre.html" />
+    <Content Include="App\views\genredetails.html" />
     <Content Include="App\views\moviedetails.html" />
     <Content Include="App\views\movies.html" />
     <Content Include="App\views\welcome.html" />

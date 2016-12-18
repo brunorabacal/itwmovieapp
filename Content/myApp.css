@@ -44,7 +44,9 @@ body {
 }
 
 .container {
-    background-color: white;
+    background-color: #151515;
+    color: white;
+    ;
 }
 
 .imdb_logo {
@@ -63,3 +65,26 @@ body {
 .star_empty {
     color: #DDD;
 }
+
+/* Novo Esquema de cores*/
+
+.table-hover > tbody > tr:hover {
+    background-color: #132e31;
+}
+
+a {
+    color: #00BCD4;
+}
+
+    a:hover {
+        color: #9eb2b5;
+    }
+
+.navbar-default {
+    background-color: black;
+    border-color: rgba(0,0,0,0);
+}
+
+    .navbar-default .navbar-default > .active > a {
+        color: white;
+    }

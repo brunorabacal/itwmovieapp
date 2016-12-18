@@ -39,6 +39,7 @@
             }
         }
 
+        
         //---- Chamada inicial
         ajaxHelper(actorDetailsUri + id, 'GET').done(function (data) {
             self.actorDetails(data);
