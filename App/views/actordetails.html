@@ -29,8 +29,12 @@
             </tr>
         </tbody>
     </table>
-<div data-bind="foreach : actorDetails" class="container">
+    <div data-bind="foreach : actor_movies" class="container">
         <div class="col-md-2">
-            <img class="poster" data-bind="attr:{src: poster || 'default_poster' }" />  </div></div>
-
+            <a data-bind="attr: { href : '#MovieDetails/'+movieID}, text: movie_title">
+                <img class="poster" data-bind="attr: { src: poster }" />
+            </a>
+        </div>
+    </div>
+</div>
 

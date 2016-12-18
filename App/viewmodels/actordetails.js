@@ -27,11 +27,12 @@
         }
 
         getPosts = function () {
+
             var moviesArrray = actorDetails()["actor_movies"];
             for (i = 0; i < moviesArray.lenght; i++) {
-                var movieID = moviesArrya[i]["movieID"];
+                var movieID = moviesArray[i]["movieID"];
                 ajaxHelper(movieUrl + movieID.toString(), 'GET').done(function (data) {
-                    actorDetails()[i]["poster"] = data["poster"];
+                    actorDetails()["actor_movies"][i]["poster"] = data["poster"];
                 });
             }
         }
