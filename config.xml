@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="pt.talents-e-treasures.aguedacomvida" version="1.0.0.201511151632" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-  <name>ITW App</name>
-  <description>Esta plataforma servirá para o desenvolvimento de aplcações móveis na unidade curricular de Introdução às tecnologias Web (ITW) no ano letivo de 2015/16.</description>
-  <author email="jsp@ua.pt" href="www.ua.pt/deti">Departamento de Engª Elestrónica e Telecomunicações, Universidade de Aveiro</author>
+  <name>Like IMDb...but Worst</name>
+  <description>O que poderia ser um 20... é agora isto</description>
+  <author email="brunorabacal@ua.pt" href="www.ua.pt/deti">Engenharia Informática UA</author>
   <preference name="permissions" value="none" />
   <preference name="orientation" value="portrait" />
   <preference name="target-device" value="universal" />
