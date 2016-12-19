@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="pt.talents-e-treasures.aguedacomvida" version="1.0.0.201511151632" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
   <name>Like IMDb...but Worst</name>
-  <description>O que poderia ser um 20... é agora isto</description>
+  <description>O nome diz tudo...</description>
   <author email="brunorabacal@ua.pt" href="www.ua.pt/deti">Engenharia Informática UA</author>
   <preference name="permissions" value="none" />
   <preference name="orientation" value="portrait" />
