@@ -1,28 +1,30 @@
-﻿<div class="container">
-    <div class="text-center">
-        <h2>Search Movies by Name  - <small data-bind="visible: (moviesCount() > 0)"><i class="fa fa-film"></i> [<span data-bind="text: moviesCount"></span> ]</small></h2>
-    </div>
-    <div class="row">
-        <form data-bind="submit: searchMovies">
+﻿    <div class="container">
+        <div class="page-header">
+            <h3 class="list_identification" data-bind="visible: (genresCount() > 0)"><img class="inverted" src="https://cdn3.iconfinder.com/data/icons/glypho-movie-and-video/64/theater-masks-512.png" width="25" height="25"> Genres List (<span data-bind="text: genresCount"></span>)</h3>
+        </div>
+        <div class="row">
             <div class="col-md-6 col-md-offset-2">
                 <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">Movie Name:</span>
-                    <input type="text" id="movieTitle" class="form-control" data-bind="value : searchText, valueUpdate: 'afterkeydown'" aria-describedby="basic-addon1" placeholder="Movie name" />
+                    <span class="input-group-addon" id="basic-addon1">Genre Name:</span>
+                    <input type="text" id="genreTitle" class="form-control" data-bind="value : searchText" aria-describedby="basic-addon1" placeholder="Genre name" />
                 </div>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-default" id="searchBtn" data-bind="click: searchMovies, disable : searchTextGood"><i class="fa fa-search"></i></button>
-                <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearMovies"><i class="fa fa-trash-o"></i></button>
+                <button class="btn btn-default" id="searchBtn" data-bind="click: searchGenres, disable : searchTextGood"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearGenres"><i class="fa fa-trash-o"></i></button>
             </div>
-        </form>
-    </div>
-    <hr />
-    <div class="row" data-bind="foreach: movies">
-        <div class="col-md-4">
-            <div><i class="fa fa-film"></i> <a data-bind="attr: { href : '#movieDetails/'+movieID}, text: movie_title"></a></div>
         </div>
+        <hr />
+        <div class="row" data-bind="foreach: genres">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a data-bind="attr: { href : '#GenreDetails/'+genreID}, text: genreName"></a>
+            </div>
+        </div>
+        <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
     </div>
-    <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
-</div>
+    <footer class="container">
+        
+        <p>© 2016</p> <i class="fa fa-blind"></i>
+    </footer>
 
 

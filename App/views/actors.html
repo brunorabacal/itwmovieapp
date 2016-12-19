@@ -1,25 +1,25 @@
-﻿
-    <div class="page-header">
-        <h2>ActorService - <small data-bind="visible: (actorsCount() > 0)"><i class="fa fa-film"></i> Actors List [<span data-bind="text: actorsCount"></span> ]</small></h2>
+﻿<div class="container">
+    <div class="text-center">
+        <h2>Search Actors <small data-bind="visible: (actorsCount() > 0)"><img class="inverted" src="https://cdn4.iconfinder.com/data/icons/user-icons-5/100/user-21-512.png" width="25" height="25">[<span data-bind="text: actorsCount"></span> ]</small></h2>
     </div>
-    <div class="container">
-        <div class="row">
+    <div class="row margin-bottom-md">
+        <form data-bind="submit: searchActors">
             <div class="col-md-6 col-md-offset-2">
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">Actor Name:</span>
-                    <input type="text" id="actorTitle" class="form-control" data-bind="value : searchText" aria-describedby="basic-addon1" placeholder="Actor name" />
+                    <input type="text" id="actorTitle" class="form-control" data-bind="value : searchText, valueUpdate: 'afterkeydown'" aria-describedby="basic-addon1" placeholder="Actor name" />
                 </div>
             </div>
             <div class="col-md-2">
                 <button class="btn btn-default" id="searchBtn" data-bind="click: searchActors, disable : searchTextGood"><i class="fa fa-search"></i></button>
                 <button class="btn btn-default" id="clearSearchBtn" data-bind="click : clearActors"><i class="fa fa-trash-o"></i></button>
             </div>
-        </div>
-        <hr />
-        <div class="row" data-bind="foreach: actors">
-            <div class="col-md-4">
-                <div><i class="fa fa-film"></i> <a data-bind="attr: { href : '#ActorDetails/'+actorID}, text: actorName"></a></div>
-            </div>
-        </div>
-        <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>
+        </form>
     </div>
+
+    <div class="row margin-bottom-md" data-bind="foreach: actors">
+        <div class="col-md-4">
+            <div><i class="fa fa-film"></i> <a data-bind="attr: { href : '#ActorDetails/'+actorID}, text: actorName"></a></div>
+        </div>
+    </div>
+    <span class="alert alert-danger col-md-12" data-bind="visible: error, html: error"></span>

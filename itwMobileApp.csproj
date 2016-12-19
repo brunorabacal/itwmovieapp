@@ -101,9 +101,20 @@
     <Content Include="App\views\movies.html" />
     <Content Include="App\views\welcome.html" />
     <Content Include="Content\images\bckg.jpg" />
+    <Content Include="Content\images\default_photo.jpg" />
     <Content Include="Content\images\default_poster.jpg" />
+    <Content Include="Content\images\nophoto.png" />
     <Content Include="Content\images\noposter.png" />
     <Content Include="icon.png" />
+    <Content Include="images\bckg.jpg" />
+    <Content Include="images\default_photo.jpg" />
+    <Content Include="images\default_poster.jpg" />
+    <Content Include="images\icon.png" />
+    <Content Include="images\ios-startup-image-landscape.png" />
+    <Content Include="images\ios-startup-image-portrait.png" />
+    <Content Include="images\logo.fw.png" />
+    <Content Include="images\nophoto.png" />
+    <Content Include="images\noposter.png" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

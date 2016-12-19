@@ -1,20 +1,18 @@
-﻿<div data-bind="foreach : movieDetails" class="container">
-    <div class="col-md-4">
-        <img class="poster" data-bind="attr:{src: poster || 'default_poster' }" />  
-     </div>
-    <div class="col-md-8">
-        <div class="title-block col-md-12">
+﻿<div data-bind="foreach : movieDetails" class="container nopad">
+    <div class="col-md-4 nopad margin-bottom-md">
+        <img class="poster" data-bind="attr:{src: poster || '../../Content/images/default_poster.jpg' }" />
+    </div>
+    <div class="col-md-8 margin-bottom-md">
+        <div class="title-block2 col-md-12">
             <h1 class="title-block" data-bind="text: movie_title"></h1>
-            <span id="year_title" data-bind="text: title_year"></span>
-            <span><i class="fa fa-star star_empty"></i></span>
-            <span><i class="fa fa-star star_empty"></i></span>
-            <span><i class="fa fa-star star_empty"></i></span>
-            <span><i class="fa fa-star star_empty"></i></span>
-            <span><i class="fa fa-star star_empty"></i></span>
-
-            <a data-bind="attr:{ href: movie_imdb_link}" target="_blank">
-                <img class="imdb_logo" src="http://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.pnghttp://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.png" alt="IMDb Link" />
-            </a>
+            <h2 id="year_title" data-bind="text: title_year+' - '"></h2>
+            <h2 id="year_title" class="score_value" data-bind="text: imdb_score"></h2>
+                
+            <span class="">
+                <a data-bind="attr:{ href: movie_imdb_link}" target="_blank">
+                    <img class="imdb_logo" src="http://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.pnghttp://ia.media-imdb.com/images/M/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@._V1_.png" alt="IMDb Link" />
+                </a>
+            </span>
         </div>
         <table class="table table-hover table-condensed">
             <tr>
@@ -31,7 +29,7 @@
                 <th>Director</th>
                 <td><a data-bind="attr: { href : '#directorDetails/'+directorID}, text: directorName"></a></td>
             </tr>
-            
+
             <tr>
                 <th>Country</th>
                 <td data-bind="text: countryName"></td>
@@ -87,8 +85,12 @@
                 <td data-bind="text: movie_facebook_likes"></td>
             </tr>
 
-</table>
+        </table>
     </div>
-
+    <div class="nopad margin-bottom-md">
+        <iframe id="player" type="text/html" width="100%" height="432.688"
+                data-bind="attr:{src: 'https://www.youtube.com/embed?listType=search&list='+movie_title+'+trailer'}"
+                frameborder="0"></iframe>
+    </div>
 </div>
 

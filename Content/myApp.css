@@ -21,16 +21,14 @@ body {
 
 /* Novo Conteudo CSS*/
 #applicationHost {
-    min-height: 700px;
+
+    min-height: 100vh;
     background-size: cover;
     background-image: url(/Content/images/bckg.jpg);
 }
 
 .poster {
-    position: relative;
-    left: -30px;
-    height: 590px;
-    max-width: 403px;
+    width: 100%;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
     -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
     box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
@@ -42,15 +40,27 @@ body {
     margin: 15px 0px 15px 0px;
     padding-left: 0px;
 }
+.title-block2 {
+    display: inline;
+    font-weight: bold;
+    margin: 0px 0px 15px 0px;
+    padding-left: 0px;
+}
 
 .container {
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(50, 50, 50, 0.77);
+-moz-box-shadow:    0px 0px 17px 0px rgba(50, 50, 50, 0.77);
+box-shadow:         0px 0px 17px 0px rgba(50, 50, 50, 0.77);
+   padding-top:54px;
     background-color: #151515;
     color: white;
     ;
 }
 
+h2.score_value {color: #e6b91e;}
 .imdb_logo {
     width: 50px;
+    padding-bottom:10px;
 }
 
 .photo {
@@ -85,6 +95,69 @@ a {
     border-color: rgba(0,0,0,0);
 }
 
-    .navbar-default .navbar-default > .active > a {
+    h2 small, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-default > .active > a, .navbar-default .navbar-brand {
         color: white;
     }
+
+.margin-bottom-md {
+    margin-bottom: 30px;
+}
+/*Lato|Open+Sans|Raleway|Source+Sans+Pro|Roboto!Roboto+Slab|Oswald|Abel|Alfa+Slab+One*/
+
+h1.welcome {
+    font-size: 60px;
+    color: #e6b91e;
+    margin-top: -10px;
+}
+
+.welcome {
+    font-family: Oswald;
+}
+
+.nopad {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#year_title {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inverted {
+    filter: invert(100%);
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    border-radius: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: 9px;
+    color: white;
+    background-color: #00BCD4;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: white;
+}
+
+#logo {
+    font-family: Oswald;
+    font-size: 25px;
+    padding-right: 50px;
+}
+
+
+#applicationHost > div > nav, navbar navbar-default navbar-fixed-top {
+    max-width: 1170px !important;
+    margin: auto !important;
+}
+
+#applicationHost > div > div, page-host {
+    margin-top: 0px;
+    padding_top: 54px;
+}
+html {
+    background-color: black;
+}

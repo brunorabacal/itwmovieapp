@@ -1,8 +1,8 @@
-﻿<div data-bind="foreach : directorDetails" class="container">
-    <div class="col-md-2">
-        <img class="photo" data-bind="attr:{src: photo}" />
+﻿<div data-bind="foreach : directorDetails" class="container nopad">
+    <div class="col-md-4 nopad">
+        <img class="poster" data-bind="attr:{src: photo }" />
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8 margin-bottom-md">
         <div class="title-block col-md-12">
             <h1 class="title-block" data-bind="text: directorName"></h1>
         </div>
@@ -28,3 +28,7 @@
             </table>
         </div>
     </div>
+</div>
+
+
+
