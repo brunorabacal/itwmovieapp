@@ -15,7 +15,7 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator'],  function (s
     system.debug(true);
     //>>excludeEnd("build");
 
-    app.title = 'O que vou ver Hoje?';
+    app.title = 'Like IMDb... but Worst';
 
     app.configurePlugins({
         router: true,
