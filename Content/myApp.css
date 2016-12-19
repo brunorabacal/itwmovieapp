@@ -21,7 +21,6 @@ body {
 
 /* Novo Conteudo CSS*/
 #applicationHost {
-
     min-height: 100vh;
     background-size: cover;
     background-image: url(/Content/images/bckg.jpg);
@@ -40,6 +39,7 @@ body {
     margin: 15px 0px 15px 0px;
     padding-left: 0px;
 }
+
 .title-block2 {
     display: inline;
     font-weight: bold;
@@ -49,18 +49,21 @@ body {
 
 .container {
     -webkit-box-shadow: 0px 0px 17px 0px rgba(50, 50, 50, 0.77);
--moz-box-shadow:    0px 0px 17px 0px rgba(50, 50, 50, 0.77);
-box-shadow:         0px 0px 17px 0px rgba(50, 50, 50, 0.77);
-   padding-top:54px;
+    -moz-box-shadow: 0px 0px 17px 0px rgba(50, 50, 50, 0.77);
+    box-shadow: 0px 0px 17px 0px rgba(50, 50, 50, 0.77);
+    padding-top: 54px;
     background-color: #151515;
     color: white;
     ;
 }
 
-h2.score_value {color: #e6b91e;}
+h2.score_value {
+    color: #e6b91e;
+}
+
 .imdb_logo {
     width: 50px;
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
 
 .photo {
@@ -71,12 +74,11 @@ h2.score_value {color: #e6b91e;}
     box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
 }
 
-/*Sistema de estrelas*/
 .star_empty {
     color: #DDD;
 }
 
-/* Novo Esquema de cores*/
+
 
 .table-hover > tbody > tr:hover {
     background-color: #132e31;
@@ -158,6 +160,8 @@ h1.welcome {
     margin-top: 0px;
     padding_top: 54px;
 }
+
 html {
     background-color: black;
 }
+h3.genre { margin: 8px 0px 8px 0px; }
